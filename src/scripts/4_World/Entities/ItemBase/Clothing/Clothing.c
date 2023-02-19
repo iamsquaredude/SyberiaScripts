@@ -9,16 +9,13 @@ modded class Clothing
 	{
 		if (GetGame().IsClient())
 		{
-			if (GetSyberiaOptions() && GetSyberiaOptions().m_client && GetSyberiaOptions().m_client.m_blockAccessToBackpack)
+			PlayerBase player = PlayerBase.Cast(GetHierarchyRootPlayer());
+			if (player && player == GetGame().GetPlayer())
 			{
-				PlayerBase player = PlayerBase.Cast(GetHierarchyRootPlayer());
-				if (player && player == GetGame().GetPlayer())
+				ItemBase back = player.GetItemOnSlot("Back");
+				if (back == this)
 				{
-					ItemBase back = player.GetItemOnSlot("Back");
-					if (back == this)
-					{
-						return true;
-					}
+					return true;
 				}
 			}
 		}
