@@ -1,6 +1,6 @@
 modded class MissionGameplay
 {
-	private ref WatermarkHandler m_watermarkHandler;
+	//private ref WatermarkHandler m_watermarkHandler;
 	ref Widget m_AdditionHudRootWidget = null;
 	ref SyberiaAdditionalHud m_SyberiaAdditionalHud = null;
 	ref array<int> m_pressedKeys;
@@ -56,7 +56,7 @@ modded class MissionGameplay
 	{
 		super.OnInit();
 		
-		m_watermarkHandler = new WatermarkHandler();
+		//m_watermarkHandler = new WatermarkHandler();
 		
 		if (!m_AdditionHudRootWidget)
 		{
@@ -420,7 +420,7 @@ modded class MissionGameplay
 		}
 	}
 	
-	override void Pause()
+	/*override void Pause()
 	{
 		super.Pause();
 
@@ -436,7 +436,7 @@ modded class MissionGameplay
 			ingameMenu.GetLayoutRoot().AddChild(watermarkBase, true);
 			delete watermarkWidget;
 		}
-	}
+	}*/
 	
 	void OnSyncToxicZone(ParamsReadContext ctx, PlayerIdentity sender)
 	{

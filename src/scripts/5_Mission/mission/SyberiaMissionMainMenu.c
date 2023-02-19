@@ -1,4 +1,4 @@
-modded class MissionMainMenu
+/*modded class MissionMainMenu
 {
 	private ref WatermarkHandler m_watermarkHandler;
 	
@@ -22,4 +22,4 @@ modded class MissionMainMenu
 		rootWidget.AddChild(watermarkBase, true);
 		delete watermarkWidget;
 	}
-};
+};*/

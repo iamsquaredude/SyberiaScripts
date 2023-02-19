@@ -1,6 +1,6 @@
 modded class ColorManager
 {
-    override int GetItemColor( ItemBase item )
+    int GetItemColor( ItemBase item )
 	{
 		ItemBase dragged_item = ItemBase.Cast( ItemManager.GetInstance().GetDraggedItem() );		
 		if ( dragged_item )
